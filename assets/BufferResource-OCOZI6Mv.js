@@ -1,4 +1,4 @@
-import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-ig8CKFE8.js";const h={name:"local-uniform-bit",vertex:{header:`
+import{w as _,l as g,S as c,m as U,B as y,o as l,E as I,p as m}from"./index-yGENM-mn.js";const h={name:"local-uniform-bit",vertex:{header:`
 
             struct LocalUniforms {
                 uTransformMatrix:mat3x3<f32>,
@@ -125,7 +125,7 @@ import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-ig8C
                 cv[2] = v.blue;
                 gl.uniform3f(ud[name].location, v.red, v.green, v.blue);
             }
-        `}];function k(e,t,a){const s=[`
+        `}];function A(e,t,a){const s=[`
         var v = null;
         var v2 = null;
         var t = 0;
@@ -187,10 +187,10 @@ import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-ig8C
         data[offset + 10] = v[8];`,"mat4x4<f32>":`
         for (let i = 0; i < 16; i++) {
             data[offset + i] = v[i];
-        }`,"mat3x2<f32>":v(3,2),"mat4x2<f32>":v(4,2),"mat2x3<f32>":v(2,3),"mat4x3<f32>":v(4,3),"mat2x4<f32>":v(2,4),"mat3x4<f32>":v(3,4)},A={...M,"mat2x2<f32>":`
+        }`,"mat3x2<f32>":v(3,2),"mat4x2<f32>":v(4,2),"mat2x3<f32>":v(2,3),"mat4x3<f32>":v(4,3),"mat2x4<f32>":v(2,4),"mat3x4<f32>":v(3,4)},k={...M,"mat2x2<f32>":`
         data[offset] = v[0];
         data[offset + 1] = v[1];
         data[offset + 2] = v[2];
         data[offset + 3] = v[3];
-    `};class w extends I{constructor({buffer:t,offset:a,size:s}){super(),this.uid=m("buffer"),this._resourceType="bufferResource",this._touched=0,this._resourceId=m("resource"),this._bufferResource=!0,this.destroyed=!1,this.buffer=t,this.offset=a|0,this.size=s,this.buffer.on("change",this.onBufferChange,this)}get _gcLastUsed(){return this.buffer?._gcLastUsed??-1}set _gcLastUsed(t){this.buffer&&(this.buffer._gcLastUsed=t)}onBufferChange(){this._resourceId=m("resource"),this.emit("change",this)}destroy(t=!1){this.destroyed=!0,t&&this.buffer.destroy(),this.emit("change",this),this.buffer=null,this.removeAllListeners()}}export{w as B,d as G,R as U,h as a,M as b,k as c,p as d,O as e,B as f,D as g,E as l,C as t,A as u};
-//# sourceMappingURL=BufferResource-Ag1xiwPI.js.map
+    `};class w extends I{constructor({buffer:t,offset:a,size:s}){super(),this.uid=m("buffer"),this._resourceType="bufferResource",this._touched=0,this._resourceId=m("resource"),this._bufferResource=!0,this.destroyed=!1,this.buffer=t,this.offset=a|0,this.size=s,this.buffer.on("change",this.onBufferChange,this)}get _gcLastUsed(){return this.buffer?._gcLastUsed??-1}set _gcLastUsed(t){this.buffer&&(this.buffer._gcLastUsed=t)}onBufferChange(){this._resourceId=m("resource"),this.emit("change",this)}destroy(t=!1){this.destroyed=!0,t&&this.buffer.destroy(),this.emit("change",this),this.buffer=null,this.removeAllListeners()}}export{w as B,d as G,R as U,h as a,M as b,A as c,p as d,O as e,B as f,D as g,E as l,C as t,k as u};
+//# sourceMappingURL=BufferResource-OCOZI6Mv.js.map
