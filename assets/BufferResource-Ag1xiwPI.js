@@ -1,4 +1,4 @@
-import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-DunRsQKr.js";const h={name:"local-uniform-bit",vertex:{header:`
+import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-ig8CKFE8.js";const h={name:"local-uniform-bit",vertex:{header:`
 
             struct LocalUniforms {
                 uTransformMatrix:mat3x3<f32>,
@@ -193,4 +193,4 @@ import{w as _,h as g,S as c,i as U,B as y,k as l,E as I,l as m}from"./index-DunR
         data[offset + 2] = v[2];
         data[offset + 3] = v[3];
     `};class w extends I{constructor({buffer:t,offset:a,size:s}){super(),this.uid=m("buffer"),this._resourceType="bufferResource",this._touched=0,this._resourceId=m("resource"),this._bufferResource=!0,this.destroyed=!1,this.buffer=t,this.offset=a|0,this.size=s,this.buffer.on("change",this.onBufferChange,this)}get _gcLastUsed(){return this.buffer?._gcLastUsed??-1}set _gcLastUsed(t){this.buffer&&(this.buffer._gcLastUsed=t)}onBufferChange(){this._resourceId=m("resource"),this.emit("change",this)}destroy(t=!1){this.destroyed=!0,t&&this.buffer.destroy(),this.emit("change",this),this.buffer=null,this.removeAllListeners()}}export{w as B,d as G,R as U,h as a,M as b,k as c,p as d,O as e,B as f,D as g,E as l,C as t,A as u};
-//# sourceMappingURL=BufferResource-JT_Fevl4.js.map
+//# sourceMappingURL=BufferResource-Ag1xiwPI.js.map
