@@ -34,6 +34,9 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) return;
+  // Video is fetched in byte ranges; a 206 cannot be cached, and relaying ranges
+  // through the worker only adds a hop. Let the browser handle it directly.
+  if (req.headers.has('range') || req.destination === 'video') return;
 
   // The document: network first, so a fresh build is always picked up.
   if (req.mode === 'navigate') {
