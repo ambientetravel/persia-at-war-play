@@ -39,9 +39,17 @@ self.addEventListener('fetch', (event) => {
   if (req.headers.has('range') || req.destination === 'video') return;
 
   // The document: network first, so a fresh build is always picked up.
+  //
+  // `cache: 'no-cache'` matters. GitHub Pages sends index.html with
+  // max-age=600, and a plain fetch() from here goes through the browser's HTTP
+  // cache — so for ten minutes after a deploy a returning player was handed
+  // the OLD page, pointing at the OLD game, while this worker believed it was
+  // being network-first. Measured 2 Oct 2026: the live site served the new
+  // build and a browser that had visited recently still loaded the previous
+  // one. no-cache revalidates with the ETag: one small 304 when nothing changed.
   if (req.mode === 'navigate') {
     event.respondWith(
-      fetch(req)
+      fetch(req, { cache: 'no-cache' })
         .then((res) => {
           const copy = res.clone();
           caches.open(CACHE).then((c) => c.put('./index.html', copy)).catch(() => {});
